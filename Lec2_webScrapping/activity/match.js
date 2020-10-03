@@ -10,5 +10,15 @@ function fun(error , res , data){
 }
 
 function parseData(data){
-    fs.writeFileSync("./match.html" , data);
+    let ch = cheerio.load(data);
+    let bothInnings = ch(".card.content-block.match-scorecard-table .Collapsible");
+    // fs.writeFileSync("bothInnings.html" , bothInnings);
+    for(let i=0 ; i<bothInnings.length ; i++){
+        let teamName = ch(bothInnings[i]).find("h5").text();
+        // Australia Innings (50 overs maximum)
+        // ["Australia" , "(50 overs maximum)" ];
+        teamName = teamName.split("Innings")[0].trim();
+        console.log(teamName);
+
+    }
 }

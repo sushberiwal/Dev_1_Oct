@@ -6,7 +6,7 @@ const getAllMatches = require("./allMatches");
 
 // request is a module used to fetch html of a webpage 
 
-request(  "https://www.espncricinfo.com/series/_/id/8039/season/2019/icc-cricket-world-cup" , fun );
+request("https://www.espncricinfo.com/series/_/id/8039/season/2019/icc-cricket-world-cup" , fun );
 
 // data => html file
 // response => object , statusCode == 200
