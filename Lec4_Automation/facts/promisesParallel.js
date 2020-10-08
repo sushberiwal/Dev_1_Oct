@@ -1,7 +1,7 @@
 // async tasks => promises => parallely files read
 let fs = require("fs");
 
-let f1KaPromise =  fs.promises.readFile("./f1.txt");
+let f1KaPromise = fs.promises.readFile("./f1.txt");
 let f2KaPromise = fs.promises.readFile("./f2.txt");
 let f3KaPromise = fs.promises.readFile("./f3.txt");
 
