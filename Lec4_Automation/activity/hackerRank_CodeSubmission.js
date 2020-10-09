@@ -88,7 +88,6 @@ browserPromise
             return nextQuesSolvedPromise;
         })
     }
-    
     return oneQuestionSolvedPromise;
   })
   .then(function () {
